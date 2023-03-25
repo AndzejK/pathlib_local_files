@@ -1,6 +1,5 @@
 # tests - to push to hub I used this command ->  git push -u gith mac
 from pathlib import Path
-#print (dir(Path)) -> exists(), name(), rename() etc
 
 path_to_file_1=Path("files/file_1.txt")
 path_to_file_2=Path("files/file_2.txt")
