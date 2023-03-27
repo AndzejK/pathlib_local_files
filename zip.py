@@ -18,6 +18,6 @@ for dir in content_of_root_dir:
     archive_name=backup_path/(dir.name+".zip")
     # I want to zip each dir separately and copy/move to backup dir
     with zipfile.ZipFile(archive_name,"w") as zf:
-        for file_in_directory in dir.glob("*"):
+        for file_in_directory in dir.glob("**/*"):
             zf.write(file_in_directory)
         
