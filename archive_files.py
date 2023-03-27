@@ -8,3 +8,4 @@ archive_path=root_dir/Path(f"archive_{get_today_date}.zip") # here is a path whe
 with zipfile.ZipFile(archive_path,"w") as zf:
     for path in root_dir.rglob("*.txt"):
         zf.write(path)
+        path.unlink() # deletes a file adds to .zip archive
