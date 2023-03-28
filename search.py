@@ -5,7 +5,7 @@ print(downloads.absolute())
 file_count=0
 dir_count=0
 
-for file in downloads.glob("*"):
+for file in downloads.rglob("*"):
     
     if file.is_file():
         #file_count+=1
@@ -14,6 +14,7 @@ for file in downloads.glob("*"):
             file_count+=1
             print(match_jpg.group())
             print(f"File: {file.name}")
+            print(f"the location of this pic: {file.absolute()}")
     else:
         dir_count+=1
         print(f"Directory: {file.name}")
